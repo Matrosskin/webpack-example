@@ -8,6 +8,7 @@ write(
             'Hi!',
             'I am a web application!',
             'And my bundle built by webpack.',
+            'And css also built by webpack',
             '</h1>'
         ],
         '<br>'
