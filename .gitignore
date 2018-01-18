@@ -1,4 +1,2 @@
 node_modules/*
-dist/bundle.js
-dist/cats.jpg
-dist/grass.jpg
+dist/*

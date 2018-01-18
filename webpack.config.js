@@ -1,8 +1,14 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 module.exports = {
-    entry: path.resolve(__dirname, './src/js/index.js'),
+    entry: {
+        app: path.resolve(__dirname, './src/js/index.js'),
+        write: path.resolve(__dirname, './src/js/common/write.js')
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
@@ -22,5 +28,11 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src/index.html')
+        }),
+        new CleanWebpackPlugin(['dist'])
+    ]
 };
