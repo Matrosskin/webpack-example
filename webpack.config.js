@@ -9,7 +9,7 @@ module.exports = {
         write: path.resolve(__dirname, './src/js/common/write.js')
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].bundle.[hash:7].js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
@@ -25,7 +25,7 @@ module.exports = {
                 test: /\.(png|svg|jpg|gif)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]'
+                    name: '[name].[hash:7].[ext]'
                 }
             }
         ]
@@ -35,6 +35,6 @@ module.exports = {
             template: path.resolve(__dirname, 'src/index.html')
         }),
         new CleanWebpackPlugin(['dist']),
-        new ExtractTextPlugin("styles.css")
+        new ExtractTextPlugin("styles[hash:7]..css")
     ]
 };
