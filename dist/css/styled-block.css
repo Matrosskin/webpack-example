@@ -1,0 +1,16 @@
+.styled-block {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: gray;
+}
+
+.grass-block {
+    background-image: url('../img/grass.jpg');
+}
+
+.cats-block {
+    width: 500px;
+}

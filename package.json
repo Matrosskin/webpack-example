@@ -1,0 +1,21 @@
+{
+  "name": "webpack-example",
+  "version": "1.0.0",
+  "description": "Used for showing how project can be step by step moved to webpack.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matrosskin/webpack-example.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "EugenI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matrosskin/webpack-example/issues"
+  },
+  "homepage": "https://github.com/Matrosskin/webpack-example#readme"
+}
