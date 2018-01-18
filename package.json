@@ -4,6 +4,7 @@
   "description": "Used for showing how project can be step by step moved to webpack.",
   "main": "index.js",
   "scripts": {
+    "build": "webpack "
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Matrosskin/webpack-example/issues"
   },
-  "homepage": "https://github.com/Matrosskin/webpack-example#readme"
+  "homepage": "https://github.com/Matrosskin/webpack-example#readme",
+  "devDependencies": {
+    "lodash": "^4.16.6",
+    "webpack": "^3.10.0"
+  }
 }
