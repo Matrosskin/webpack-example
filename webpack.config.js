@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     entry: {
@@ -32,9 +33,11 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src/index.html')
+            template: path.resolve(__dirname, 'src/index.html'),
+            chunks: ['app']
         }),
         new CleanWebpackPlugin(['dist']),
-        new ExtractTextPlugin("styles[hash:7]..css")
+        new ExtractTextPlugin("styles.[hash:7].css"),
+        new BundleAnalyzerPlugin()
     ]
 };
