@@ -45,6 +45,9 @@ module.exports = {
         new webpack.DefinePlugin({
             VERSION: JSON.stringify("v100500"),
             TWO: "1+1"
+        }),
+        new webpack.ProvidePlugin({
+            '_join': [require.resolve('lodash-es/join'), 'default']
         })
     ]
 };

@@ -1,4 +1,3 @@
-import _join from 'lodash-es/join';
 import write from './common/write';
 
 write(
