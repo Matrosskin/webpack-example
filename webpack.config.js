@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -38,6 +39,7 @@ module.exports = {
         }),
         new CleanWebpackPlugin(['dist']),
         new ExtractTextPlugin("styles.[hash:7].css"),
-        new BundleAnalyzerPlugin()
+        new BundleAnalyzerPlugin(),
+        new UglifyJsPlugin()
     ]
 };
