@@ -36,7 +36,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/index.html'),
-            chunks: ['app']
+            excludeChunks: ['write']
         }),
         new CleanWebpackPlugin(['dist']),
         new ExtractTextPlugin("styles.[hash:7].css"),
@@ -48,6 +48,13 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
             '_join': [require.resolve('lodash-es/join'), 'default']
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "common", // (the commons chunk name)
+
+            filename: "common.[hash:7].js", // (the filename of the commons chunk)
+            minChunks: 2, // (Modules must be shared between 3 entries)
         })
+
     ]
 };
