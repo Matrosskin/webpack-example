@@ -54,7 +54,11 @@ module.exports = {
 
             filename: "common.[hash:7].js", // (the filename of the commons chunk)
             minChunks: 2, // (Modules must be shared between 3 entries)
-        })
-
-    ]
+        }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
+    ],
+    devServer: {
+        hot: true
+    }
 };
